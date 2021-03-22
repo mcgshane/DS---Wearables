@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_package = "smartWatch";
+option java_multiple_files = true;
+option java_outer_classname = "smartWatchImpl";
+
+package smartWatch;
+
+
+service smartWatchService {
+
+ 	rpc turnOnSwitch(BooleanRequest) returns (BooleanResponse) {}
+ 	rpc setTimer(StringRequest) returns (StringResponse) {}
+ 	rpc startTimer(BooleanRequest) returns (BooleanResponse) {}
+   	rpc pauseTimer(BooleanRequest) returns (BooleanResponse) {}
+    rpc resetTimer(BooleanRequest) returns (BooleanResponse) {}
+ 
+ 
+}
+
+message BooleanRequest {
+  	bool booleanVal = 1;  
+}
+
+message BooleanResponse {
+    bool booleanRepVal = 1;
+}
+
+message StringRequest {
+    string stringVal = 1;
+}
+
+message StringResponse {
+    string stringRepVal = 1;
+}
+
