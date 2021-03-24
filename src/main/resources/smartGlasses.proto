@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_package = "smartGlasses";
+option java_multiple_files = true;
+option java_outer_classname = "smartGlassesImpl";
+
+package smartGlasses;
+
+
+service smartGlassesService {
+
+ 	rpc turnOnSwitch(BooleanRequest) returns (BooleanResponse) {}
+ 	rpc setDestination (StringRequest) returns (StringResponse){}
+ 	rpc startJourney (BooleanRequest)returns (StringResponse) {}
+ 	//rpc nextTurn (StringRequest) returns (StringResponse){}
+ 	rpc finalDestination (StringRequest) returns (StringResponse){}
+ 	}
+
+message BooleanRequest {
+  	bool boolVal = 1;  
+}
+
+message BooleanResponse {
+    bool boolRespVal = 1;
+}
+
+message StringRequest {
+    string stringVal = 1;
+}
+
+message StringResponse {
+    string stringRespVal = 1;
+}
+
+
