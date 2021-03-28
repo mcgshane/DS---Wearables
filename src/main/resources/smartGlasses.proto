@@ -9,27 +9,38 @@ package smartGlasses;
 
 service smartGlassesService {
 
- 	rpc turnOnSwitch(BooleanRequest) returns (BooleanResponse) {}
- 	rpc setDestination (StringRequest) returns (StringResponse){}
- 	rpc startJourney (BooleanRequest)returns (StringResponse) {}
- 	//rpc nextTurn (StringRequest) returns (StringResponse){}
- 	rpc finalDestination (StringRequest) returns (StringResponse){}
+ 	rpc turnOnGlasses(sgBooleanRequest) returns (sgBooleanResponse) {}
+ 	rpc setDestination (sgIntRequest) returns (sgBooleanResponse){}
+ 	rpc startJourney (sgBooleanRequest ) returns (stream sgStringResponse) {}
+ 	rpc distanceLeft (stream sgIntRequest) returns (stream sgIntResponse){}
  	}
 
-message BooleanRequest {
+message sgBooleanRequest {
   	bool boolVal = 1;  
 }
 
-message BooleanResponse {
+message sgBooleanResponse {
     bool boolRespVal = 1;
 }
 
-message StringRequest {
+message sgStringRequest {
     string stringVal = 1;
 }
 
-message StringResponse {
+message sgIntRequest {
+    int32 intVal = 1;
+}
+
+message sgIntResponse {
+    int32 intVal = 1;
+}
+
+message sgStringResponse {
     string stringRespVal = 1;
 }
+
+
+
+
 
 

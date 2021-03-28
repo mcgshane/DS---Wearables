@@ -16,12 +16,13 @@ public class smartWatchClient {
 
 		turnOnSwitch();
 		startTimer();
+		resetTimer();
 		
 
 	}
 	public static void turnOnSwitch() {
 		// sending the request to the server
-		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(false).build();
+		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(true).build();
 		
 		// check the response from the server
 		BooleanResponse response = blockingStub.turnOnSwitch(request);
@@ -37,7 +38,7 @@ public class smartWatchClient {
 	
 	public static void startTimer() {
 		// sending the request to the server
-		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(false).build();
+		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(true).build();
 		
 		// check the response from the server
 		BooleanResponse response = blockingStub.startTimer(request);
@@ -53,7 +54,7 @@ public class smartWatchClient {
 	
 	public static void resetTimer() {
 		// sending the request to the server
-		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(false).build();
+		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(true).build();
 		
 		// check the response from the server
 		BooleanResponse response = blockingStub.resetTimer(request);

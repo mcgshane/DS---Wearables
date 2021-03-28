@@ -60,21 +60,21 @@ public final class smartCoatServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<smartCoat.IntRequest,
-      smartCoat.IntResponse> getSetTempMethod;
+      smartCoat.StringResponse> getSetTempMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "setTemp",
       requestType = smartCoat.IntRequest.class,
-      responseType = smartCoat.IntResponse.class,
+      responseType = smartCoat.StringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<smartCoat.IntRequest,
-      smartCoat.IntResponse> getSetTempMethod() {
-    io.grpc.MethodDescriptor<smartCoat.IntRequest, smartCoat.IntResponse> getSetTempMethod;
+      smartCoat.StringResponse> getSetTempMethod() {
+    io.grpc.MethodDescriptor<smartCoat.IntRequest, smartCoat.StringResponse> getSetTempMethod;
     if ((getSetTempMethod = smartCoatServiceGrpc.getSetTempMethod) == null) {
       synchronized (smartCoatServiceGrpc.class) {
         if ((getSetTempMethod = smartCoatServiceGrpc.getSetTempMethod) == null) {
           smartCoatServiceGrpc.getSetTempMethod = getSetTempMethod = 
-              io.grpc.MethodDescriptor.<smartCoat.IntRequest, smartCoat.IntResponse>newBuilder()
+              io.grpc.MethodDescriptor.<smartCoat.IntRequest, smartCoat.StringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "smartCoat.smartCoatService", "setTemp"))
@@ -82,7 +82,7 @@ public final class smartCoatServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   smartCoat.IntRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartCoat.IntResponse.getDefaultInstance()))
+                  smartCoat.StringResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new smartCoatServiceMethodDescriptorSupplier("setTemp"))
                   .build();
           }
@@ -128,7 +128,7 @@ public final class smartCoatServiceGrpc {
     /**
      */
     public void setTemp(smartCoat.IntRequest request,
-        io.grpc.stub.StreamObserver<smartCoat.IntResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<smartCoat.StringResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getSetTempMethod(), responseObserver);
     }
 
@@ -146,7 +146,7 @@ public final class smartCoatServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 smartCoat.IntRequest,
-                smartCoat.IntResponse>(
+                smartCoat.StringResponse>(
                   this, METHODID_SET_TEMP)))
           .build();
     }
@@ -181,7 +181,7 @@ public final class smartCoatServiceGrpc {
     /**
      */
     public void setTemp(smartCoat.IntRequest request,
-        io.grpc.stub.StreamObserver<smartCoat.IntResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<smartCoat.StringResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSetTempMethod(), getCallOptions()), request, responseObserver);
     }
@@ -214,7 +214,7 @@ public final class smartCoatServiceGrpc {
 
     /**
      */
-    public smartCoat.IntResponse setTemp(smartCoat.IntRequest request) {
+    public smartCoat.StringResponse setTemp(smartCoat.IntRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetTempMethod(), getCallOptions(), request);
     }
@@ -248,7 +248,7 @@ public final class smartCoatServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<smartCoat.IntResponse> setTemp(
+    public com.google.common.util.concurrent.ListenableFuture<smartCoat.StringResponse> setTemp(
         smartCoat.IntRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetTempMethod(), getCallOptions()), request);
@@ -281,7 +281,7 @@ public final class smartCoatServiceGrpc {
           break;
         case METHODID_SET_TEMP:
           serviceImpl.setTemp((smartCoat.IntRequest) request,
-              (io.grpc.stub.StreamObserver<smartCoat.IntResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<smartCoat.StringResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();

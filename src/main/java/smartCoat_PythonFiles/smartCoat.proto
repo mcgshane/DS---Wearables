@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_package = "smartCoat";
+option java_multiple_files = true;
+option java_outer_classname = "smartCoatImpl";
+
+package smartCoat;
+
+
+service smartCoatService {
+
+ 	rpc turnOnSwitch(BooleanRequest) returns (BooleanResponse) {}
+ 	rpc setTemp (IntRequest) returns (StringResponse) {}
+ 	}
+
+message BooleanRequest {
+  	bool booleanVal = 1;  
+}
+
+message BooleanResponse {
+    bool booleanRepVal = 1;
+}
+message IntRequest{
+	int32 intValue = 1;
+}
+
+message StringResponse{
+	string stringRespVal = 1;
+}

@@ -27,62 +27,62 @@ public final class smartGlassesServiceGrpc {
   public static final String SERVICE_NAME = "smartGlasses.smartGlassesService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<smartGlasses.BooleanRequest,
-      smartGlasses.BooleanResponse> getTurnOnSwitchMethod;
+  private static volatile io.grpc.MethodDescriptor<smartGlasses.sgBooleanRequest,
+      smartGlasses.sgBooleanResponse> getTurnOnGlassesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "turnOnSwitch",
-      requestType = smartGlasses.BooleanRequest.class,
-      responseType = smartGlasses.BooleanResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "turnOnGlasses",
+      requestType = smartGlasses.sgBooleanRequest.class,
+      responseType = smartGlasses.sgBooleanResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<smartGlasses.BooleanRequest,
-      smartGlasses.BooleanResponse> getTurnOnSwitchMethod() {
-    io.grpc.MethodDescriptor<smartGlasses.BooleanRequest, smartGlasses.BooleanResponse> getTurnOnSwitchMethod;
-    if ((getTurnOnSwitchMethod = smartGlassesServiceGrpc.getTurnOnSwitchMethod) == null) {
+  public static io.grpc.MethodDescriptor<smartGlasses.sgBooleanRequest,
+      smartGlasses.sgBooleanResponse> getTurnOnGlassesMethod() {
+    io.grpc.MethodDescriptor<smartGlasses.sgBooleanRequest, smartGlasses.sgBooleanResponse> getTurnOnGlassesMethod;
+    if ((getTurnOnGlassesMethod = smartGlassesServiceGrpc.getTurnOnGlassesMethod) == null) {
       synchronized (smartGlassesServiceGrpc.class) {
-        if ((getTurnOnSwitchMethod = smartGlassesServiceGrpc.getTurnOnSwitchMethod) == null) {
-          smartGlassesServiceGrpc.getTurnOnSwitchMethod = getTurnOnSwitchMethod = 
-              io.grpc.MethodDescriptor.<smartGlasses.BooleanRequest, smartGlasses.BooleanResponse>newBuilder()
+        if ((getTurnOnGlassesMethod = smartGlassesServiceGrpc.getTurnOnGlassesMethod) == null) {
+          smartGlassesServiceGrpc.getTurnOnGlassesMethod = getTurnOnGlassesMethod = 
+              io.grpc.MethodDescriptor.<smartGlasses.sgBooleanRequest, smartGlasses.sgBooleanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "smartGlasses.smartGlassesService", "turnOnSwitch"))
+                  "smartGlasses.smartGlassesService", "turnOnGlasses"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.BooleanRequest.getDefaultInstance()))
+                  smartGlasses.sgBooleanRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.BooleanResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("turnOnSwitch"))
+                  smartGlasses.sgBooleanResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("turnOnGlasses"))
                   .build();
           }
         }
      }
-     return getTurnOnSwitchMethod;
+     return getTurnOnGlassesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<smartGlasses.StringRequest,
-      smartGlasses.StringResponse> getSetDestinationMethod;
+  private static volatile io.grpc.MethodDescriptor<smartGlasses.sgIntRequest,
+      smartGlasses.sgBooleanResponse> getSetDestinationMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "setDestination",
-      requestType = smartGlasses.StringRequest.class,
-      responseType = smartGlasses.StringResponse.class,
+      requestType = smartGlasses.sgIntRequest.class,
+      responseType = smartGlasses.sgBooleanResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<smartGlasses.StringRequest,
-      smartGlasses.StringResponse> getSetDestinationMethod() {
-    io.grpc.MethodDescriptor<smartGlasses.StringRequest, smartGlasses.StringResponse> getSetDestinationMethod;
+  public static io.grpc.MethodDescriptor<smartGlasses.sgIntRequest,
+      smartGlasses.sgBooleanResponse> getSetDestinationMethod() {
+    io.grpc.MethodDescriptor<smartGlasses.sgIntRequest, smartGlasses.sgBooleanResponse> getSetDestinationMethod;
     if ((getSetDestinationMethod = smartGlassesServiceGrpc.getSetDestinationMethod) == null) {
       synchronized (smartGlassesServiceGrpc.class) {
         if ((getSetDestinationMethod = smartGlassesServiceGrpc.getSetDestinationMethod) == null) {
           smartGlassesServiceGrpc.getSetDestinationMethod = getSetDestinationMethod = 
-              io.grpc.MethodDescriptor.<smartGlasses.StringRequest, smartGlasses.StringResponse>newBuilder()
+              io.grpc.MethodDescriptor.<smartGlasses.sgIntRequest, smartGlasses.sgBooleanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "smartGlasses.smartGlassesService", "setDestination"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.StringRequest.getDefaultInstance()))
+                  smartGlasses.sgIntRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.StringResponse.getDefaultInstance()))
+                  smartGlasses.sgBooleanResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("setDestination"))
                   .build();
           }
@@ -91,30 +91,30 @@ public final class smartGlassesServiceGrpc {
      return getSetDestinationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<smartGlasses.BooleanRequest,
-      smartGlasses.StringResponse> getStartJourneyMethod;
+  private static volatile io.grpc.MethodDescriptor<smartGlasses.sgBooleanRequest,
+      smartGlasses.sgStringResponse> getStartJourneyMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "startJourney",
-      requestType = smartGlasses.BooleanRequest.class,
-      responseType = smartGlasses.StringResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<smartGlasses.BooleanRequest,
-      smartGlasses.StringResponse> getStartJourneyMethod() {
-    io.grpc.MethodDescriptor<smartGlasses.BooleanRequest, smartGlasses.StringResponse> getStartJourneyMethod;
+      requestType = smartGlasses.sgBooleanRequest.class,
+      responseType = smartGlasses.sgStringResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<smartGlasses.sgBooleanRequest,
+      smartGlasses.sgStringResponse> getStartJourneyMethod() {
+    io.grpc.MethodDescriptor<smartGlasses.sgBooleanRequest, smartGlasses.sgStringResponse> getStartJourneyMethod;
     if ((getStartJourneyMethod = smartGlassesServiceGrpc.getStartJourneyMethod) == null) {
       synchronized (smartGlassesServiceGrpc.class) {
         if ((getStartJourneyMethod = smartGlassesServiceGrpc.getStartJourneyMethod) == null) {
           smartGlassesServiceGrpc.getStartJourneyMethod = getStartJourneyMethod = 
-              io.grpc.MethodDescriptor.<smartGlasses.BooleanRequest, smartGlasses.StringResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              io.grpc.MethodDescriptor.<smartGlasses.sgBooleanRequest, smartGlasses.sgStringResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "smartGlasses.smartGlassesService", "startJourney"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.BooleanRequest.getDefaultInstance()))
+                  smartGlasses.sgBooleanRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.StringResponse.getDefaultInstance()))
+                  smartGlasses.sgStringResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("startJourney"))
                   .build();
           }
@@ -123,36 +123,36 @@ public final class smartGlassesServiceGrpc {
      return getStartJourneyMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<smartGlasses.StringRequest,
-      smartGlasses.StringResponse> getFinalDestinationMethod;
+  private static volatile io.grpc.MethodDescriptor<smartGlasses.sgIntRequest,
+      smartGlasses.sgIntResponse> getDistanceLeftMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "finalDestination",
-      requestType = smartGlasses.StringRequest.class,
-      responseType = smartGlasses.StringResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<smartGlasses.StringRequest,
-      smartGlasses.StringResponse> getFinalDestinationMethod() {
-    io.grpc.MethodDescriptor<smartGlasses.StringRequest, smartGlasses.StringResponse> getFinalDestinationMethod;
-    if ((getFinalDestinationMethod = smartGlassesServiceGrpc.getFinalDestinationMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "distanceLeft",
+      requestType = smartGlasses.sgIntRequest.class,
+      responseType = smartGlasses.sgIntResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<smartGlasses.sgIntRequest,
+      smartGlasses.sgIntResponse> getDistanceLeftMethod() {
+    io.grpc.MethodDescriptor<smartGlasses.sgIntRequest, smartGlasses.sgIntResponse> getDistanceLeftMethod;
+    if ((getDistanceLeftMethod = smartGlassesServiceGrpc.getDistanceLeftMethod) == null) {
       synchronized (smartGlassesServiceGrpc.class) {
-        if ((getFinalDestinationMethod = smartGlassesServiceGrpc.getFinalDestinationMethod) == null) {
-          smartGlassesServiceGrpc.getFinalDestinationMethod = getFinalDestinationMethod = 
-              io.grpc.MethodDescriptor.<smartGlasses.StringRequest, smartGlasses.StringResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+        if ((getDistanceLeftMethod = smartGlassesServiceGrpc.getDistanceLeftMethod) == null) {
+          smartGlassesServiceGrpc.getDistanceLeftMethod = getDistanceLeftMethod = 
+              io.grpc.MethodDescriptor.<smartGlasses.sgIntRequest, smartGlasses.sgIntResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "smartGlasses.smartGlassesService", "finalDestination"))
+                  "smartGlasses.smartGlassesService", "distanceLeft"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.StringRequest.getDefaultInstance()))
+                  smartGlasses.sgIntRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  smartGlasses.StringResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("finalDestination"))
+                  smartGlasses.sgIntResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("distanceLeft"))
                   .build();
           }
         }
      }
-     return getFinalDestinationMethod;
+     return getDistanceLeftMethod;
   }
 
   /**
@@ -184,65 +184,62 @@ public final class smartGlassesServiceGrpc {
 
     /**
      */
-    public void turnOnSwitch(smartGlasses.BooleanRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.BooleanResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getTurnOnSwitchMethod(), responseObserver);
+    public void turnOnGlasses(smartGlasses.sgBooleanRequest request,
+        io.grpc.stub.StreamObserver<smartGlasses.sgBooleanResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getTurnOnGlassesMethod(), responseObserver);
     }
 
     /**
      */
-    public void setDestination(smartGlasses.StringRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.StringResponse> responseObserver) {
+    public void setDestination(smartGlasses.sgIntRequest request,
+        io.grpc.stub.StreamObserver<smartGlasses.sgBooleanResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getSetDestinationMethod(), responseObserver);
     }
 
     /**
      */
-    public void startJourney(smartGlasses.BooleanRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.StringResponse> responseObserver) {
+    public void startJourney(smartGlasses.sgBooleanRequest request,
+        io.grpc.stub.StreamObserver<smartGlasses.sgStringResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getStartJourneyMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     *rpc nextTurn (StringRequest) returns (StringResponse){}
-     * </pre>
      */
-    public void finalDestination(smartGlasses.StringRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.StringResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getFinalDestinationMethod(), responseObserver);
+    public io.grpc.stub.StreamObserver<smartGlasses.sgIntRequest> distanceLeft(
+        io.grpc.stub.StreamObserver<smartGlasses.sgIntResponse> responseObserver) {
+      return asyncUnimplementedStreamingCall(getDistanceLeftMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getTurnOnSwitchMethod(),
+            getTurnOnGlassesMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                smartGlasses.BooleanRequest,
-                smartGlasses.BooleanResponse>(
-                  this, METHODID_TURN_ON_SWITCH)))
+                smartGlasses.sgBooleanRequest,
+                smartGlasses.sgBooleanResponse>(
+                  this, METHODID_TURN_ON_GLASSES)))
           .addMethod(
             getSetDestinationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                smartGlasses.StringRequest,
-                smartGlasses.StringResponse>(
+                smartGlasses.sgIntRequest,
+                smartGlasses.sgBooleanResponse>(
                   this, METHODID_SET_DESTINATION)))
           .addMethod(
             getStartJourneyMethod(),
-            asyncUnaryCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
-                smartGlasses.BooleanRequest,
-                smartGlasses.StringResponse>(
+                smartGlasses.sgBooleanRequest,
+                smartGlasses.sgStringResponse>(
                   this, METHODID_START_JOURNEY)))
           .addMethod(
-            getFinalDestinationMethod(),
-            asyncUnaryCall(
+            getDistanceLeftMethod(),
+            asyncBidiStreamingCall(
               new MethodHandlers<
-                smartGlasses.StringRequest,
-                smartGlasses.StringResponse>(
-                  this, METHODID_FINAL_DESTINATION)))
+                smartGlasses.sgIntRequest,
+                smartGlasses.sgIntResponse>(
+                  this, METHODID_DISTANCE_LEFT)))
           .build();
     }
   }
@@ -267,37 +264,34 @@ public final class smartGlassesServiceGrpc {
 
     /**
      */
-    public void turnOnSwitch(smartGlasses.BooleanRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.BooleanResponse> responseObserver) {
+    public void turnOnGlasses(smartGlasses.sgBooleanRequest request,
+        io.grpc.stub.StreamObserver<smartGlasses.sgBooleanResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getTurnOnSwitchMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTurnOnGlassesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void setDestination(smartGlasses.StringRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.StringResponse> responseObserver) {
+    public void setDestination(smartGlasses.sgIntRequest request,
+        io.grpc.stub.StreamObserver<smartGlasses.sgBooleanResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSetDestinationMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void startJourney(smartGlasses.BooleanRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.StringResponse> responseObserver) {
-      asyncUnaryCall(
+    public void startJourney(smartGlasses.sgBooleanRequest request,
+        io.grpc.stub.StreamObserver<smartGlasses.sgStringResponse> responseObserver) {
+      asyncServerStreamingCall(
           getChannel().newCall(getStartJourneyMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
-     * <pre>
-     *rpc nextTurn (StringRequest) returns (StringResponse){}
-     * </pre>
      */
-    public void finalDestination(smartGlasses.StringRequest request,
-        io.grpc.stub.StreamObserver<smartGlasses.StringResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getFinalDestinationMethod(), getCallOptions()), request, responseObserver);
+    public io.grpc.stub.StreamObserver<smartGlasses.sgIntRequest> distanceLeft(
+        io.grpc.stub.StreamObserver<smartGlasses.sgIntResponse> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getDistanceLeftMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -321,33 +315,24 @@ public final class smartGlassesServiceGrpc {
 
     /**
      */
-    public smartGlasses.BooleanResponse turnOnSwitch(smartGlasses.BooleanRequest request) {
+    public smartGlasses.sgBooleanResponse turnOnGlasses(smartGlasses.sgBooleanRequest request) {
       return blockingUnaryCall(
-          getChannel(), getTurnOnSwitchMethod(), getCallOptions(), request);
+          getChannel(), getTurnOnGlassesMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public smartGlasses.StringResponse setDestination(smartGlasses.StringRequest request) {
+    public smartGlasses.sgBooleanResponse setDestination(smartGlasses.sgIntRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetDestinationMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public smartGlasses.StringResponse startJourney(smartGlasses.BooleanRequest request) {
-      return blockingUnaryCall(
+    public java.util.Iterator<smartGlasses.sgStringResponse> startJourney(
+        smartGlasses.sgBooleanRequest request) {
+      return blockingServerStreamingCall(
           getChannel(), getStartJourneyMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     *rpc nextTurn (StringRequest) returns (StringResponse){}
-     * </pre>
-     */
-    public smartGlasses.StringResponse finalDestination(smartGlasses.StringRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getFinalDestinationMethod(), getCallOptions(), request);
     }
   }
 
@@ -371,44 +356,25 @@ public final class smartGlassesServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<smartGlasses.BooleanResponse> turnOnSwitch(
-        smartGlasses.BooleanRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<smartGlasses.sgBooleanResponse> turnOnGlasses(
+        smartGlasses.sgBooleanRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getTurnOnSwitchMethod(), getCallOptions()), request);
+          getChannel().newCall(getTurnOnGlassesMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<smartGlasses.StringResponse> setDestination(
-        smartGlasses.StringRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<smartGlasses.sgBooleanResponse> setDestination(
+        smartGlasses.sgIntRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetDestinationMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<smartGlasses.StringResponse> startJourney(
-        smartGlasses.BooleanRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getStartJourneyMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     *rpc nextTurn (StringRequest) returns (StringResponse){}
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<smartGlasses.StringResponse> finalDestination(
-        smartGlasses.StringRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getFinalDestinationMethod(), getCallOptions()), request);
-    }
   }
 
-  private static final int METHODID_TURN_ON_SWITCH = 0;
+  private static final int METHODID_TURN_ON_GLASSES = 0;
   private static final int METHODID_SET_DESTINATION = 1;
   private static final int METHODID_START_JOURNEY = 2;
-  private static final int METHODID_FINAL_DESTINATION = 3;
+  private static final int METHODID_DISTANCE_LEFT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -427,21 +393,17 @@ public final class smartGlassesServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_TURN_ON_SWITCH:
-          serviceImpl.turnOnSwitch((smartGlasses.BooleanRequest) request,
-              (io.grpc.stub.StreamObserver<smartGlasses.BooleanResponse>) responseObserver);
+        case METHODID_TURN_ON_GLASSES:
+          serviceImpl.turnOnGlasses((smartGlasses.sgBooleanRequest) request,
+              (io.grpc.stub.StreamObserver<smartGlasses.sgBooleanResponse>) responseObserver);
           break;
         case METHODID_SET_DESTINATION:
-          serviceImpl.setDestination((smartGlasses.StringRequest) request,
-              (io.grpc.stub.StreamObserver<smartGlasses.StringResponse>) responseObserver);
+          serviceImpl.setDestination((smartGlasses.sgIntRequest) request,
+              (io.grpc.stub.StreamObserver<smartGlasses.sgBooleanResponse>) responseObserver);
           break;
         case METHODID_START_JOURNEY:
-          serviceImpl.startJourney((smartGlasses.BooleanRequest) request,
-              (io.grpc.stub.StreamObserver<smartGlasses.StringResponse>) responseObserver);
-          break;
-        case METHODID_FINAL_DESTINATION:
-          serviceImpl.finalDestination((smartGlasses.StringRequest) request,
-              (io.grpc.stub.StreamObserver<smartGlasses.StringResponse>) responseObserver);
+          serviceImpl.startJourney((smartGlasses.sgBooleanRequest) request,
+              (io.grpc.stub.StreamObserver<smartGlasses.sgStringResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -453,6 +415,9 @@ public final class smartGlassesServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_DISTANCE_LEFT:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.distanceLeft(
+              (io.grpc.stub.StreamObserver<smartGlasses.sgIntResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -504,10 +469,10 @@ public final class smartGlassesServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new smartGlassesServiceFileDescriptorSupplier())
-              .addMethod(getTurnOnSwitchMethod())
+              .addMethod(getTurnOnGlassesMethod())
               .addMethod(getSetDestinationMethod())
               .addMethod(getStartJourneyMethod())
-              .addMethod(getFinalDestinationMethod())
+              .addMethod(getDistanceLeftMethod())
               .build();
         }
       }

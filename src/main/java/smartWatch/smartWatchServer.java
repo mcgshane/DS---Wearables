@@ -51,11 +51,14 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 			}
 	
 	//Set The Timer
-	public void setTimer(StringRequest request, StreamObserver<StringResponse> responseObserver) {
+	public void setTimer(IntRequest request, StreamObserver<StringResponse> responseObserver ) {
         //get value from client and respond
-		//swTimer = request.getIntValue();
-        swResponse = StringResponse.newBuilder().setStringRespVal("The timer has been set").build();
-        responseObserver.onNext(swResponse);
+		String swTimer = String.valueOf( request.getIntValue());
+		System.out.println("Server is setting timer");
+	
+		StringResponse swResponse = StringResponse.newBuilder().setStringRespVal("The timer has been set to  " + swTimer).build();
+		System.out.println("Server has set timer");
+       responseObserver.onNext(swResponse);
         responseObserver.onCompleted();
 	}
 	

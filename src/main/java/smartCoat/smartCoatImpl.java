@@ -30,10 +30,10 @@ public final class smartCoatImpl {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_smartCoat_IntRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_smartCoat_IntResponse_descriptor;
+    internal_static_smartCoat_StringResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_smartCoat_IntResponse_fieldAccessorTable;
+      internal_static_smartCoat_StringResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -46,13 +46,13 @@ public final class smartCoatImpl {
       "\n\017smartCoat.proto\022\tsmartCoat\"$\n\016BooleanR" +
       "equest\022\022\n\nbooleanVal\030\001 \001(\010\"(\n\017BooleanRes" +
       "ponse\022\025\n\rbooleanRepVal\030\001 \001(\010\"\036\n\nIntReque" +
-      "st\022\020\n\010intValue\030\001 \001(\005\"#\n\013IntResponse\022\024\n\014i" +
-      "ntRespValue\030\001 \001(\0052\227\001\n\020smartCoatService\022G" +
-      "\n\014turnOnSwitch\022\031.smartCoat.BooleanReques" +
-      "t\032\032.smartCoat.BooleanResponse\"\000\022:\n\007setTe" +
-      "mp\022\025.smartCoat.IntRequest\032\026.smartCoat.In" +
-      "tResponse\"\000B\034\n\tsmartCoatB\rsmartCoatImplP" +
-      "\001b\006proto3"
+      "st\022\020\n\010intValue\030\001 \001(\005\"\'\n\016StringResponse\022\025" +
+      "\n\rstringRespVal\030\001 \001(\t2\232\001\n\020smartCoatServi" +
+      "ce\022G\n\014turnOnSwitch\022\031.smartCoat.BooleanRe" +
+      "quest\032\032.smartCoat.BooleanResponse\"\000\022=\n\007s" +
+      "etTemp\022\025.smartCoat.IntRequest\032\031.smartCoa" +
+      "t.StringResponse\"\000B\034\n\tsmartCoatB\rsmartCo" +
+      "atImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -84,12 +84,12 @@ public final class smartCoatImpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartCoat_IntRequest_descriptor,
         new java.lang.String[] { "IntValue", });
-    internal_static_smartCoat_IntResponse_descriptor =
+    internal_static_smartCoat_StringResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_smartCoat_IntResponse_fieldAccessorTable = new
+    internal_static_smartCoat_StringResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_smartCoat_IntResponse_descriptor,
-        new java.lang.String[] { "IntRespValue", });
+        internal_static_smartCoat_StringResponse_descriptor,
+        new java.lang.String[] { "StringRespVal", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
