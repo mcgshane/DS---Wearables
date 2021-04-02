@@ -9,10 +9,10 @@ class smartCoatServiceServicer(smartCoat_pb2_grpc.smartCoatServiceServicer):
 
     def setTemp(self, request, context):
         if (request.intValue == 1):
-            returnString = '30'
-        print("Request to change heating to " + returnString)
+            returnString = '20'
+        print("Request to change Temperature " + returnString)
         response = smartCoat_pb2.StringResponse()
-        response.stringRespVal = ("Heating has been changed to " + returnString)
+        response.stringRespVal = ("Temperature has been Changed to " + returnString)
         return response
 
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

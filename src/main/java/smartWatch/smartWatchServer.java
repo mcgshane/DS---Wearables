@@ -32,9 +32,10 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 	//Turn On Switch
 			public void turnOnSwitch(BooleanRequest request, StreamObserver<BooleanResponse> responseObserver) {
 				
-				// Print a message stating the function has been invoked
+				
 		        System.out.println("Receiving request for power!");
-		        // Get the switch variable
+		        
+		        //setting the request Values
 		        Boolean turnOn = request.getBoolValue();
 		        if (turnOn) {
 		        	System.out.println("Turning power on!");
@@ -42,7 +43,7 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 		        else {
 		        	System.out.println("Turning power off!");
 		        }
-		        // Send a response with power value back
+		        // Send a response including the value
 		        BooleanResponse response = BooleanResponse.newBuilder().setBoolRespVal(turnOn).build(); 
 
 		        responseObserver.onNext(response);
@@ -52,10 +53,10 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 	
 	//Set The Timer
 	public void setTimer(IntRequest request, StreamObserver<StringResponse> responseObserver ) {
-        //get value from client and respond
+        //get value from client 
 		String swTimer = String.valueOf( request.getIntValue());
 		System.out.println("Server is setting timer");
-	
+		//respond with value from client and message
 		StringResponse swResponse = StringResponse.newBuilder().setStringRespVal("The timer has been set to  " + swTimer).build();
 		System.out.println("Server has set timer");
        responseObserver.onNext(swResponse);
@@ -65,9 +66,8 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 	//Starting the Timer
 		public void startTimer(BooleanRequest request, StreamObserver<BooleanResponse> responseObserver) {
 			
-			// Print a message stating the function has been invoked
 	        System.out.println("Timer is ready to begin");
-	        // Get the switch variable
+	        // setting the request Values
 	        Boolean start = request.getBoolValue();
 	        if (start) {
 	        	System.out.println("The timer has started");
@@ -75,7 +75,7 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 	        else {
 	        	System.out.println("The timer has been stopped");
 	        }
-	        // Send a response with power value back
+	        // Sending response 
 	        BooleanResponse response = BooleanResponse.newBuilder().setBoolRespVal(start).build(); 
 
 	        responseObserver.onNext(response);
@@ -84,15 +84,14 @@ public class smartWatchServer extends smartWatchServiceImplBase{
 		}
 		//Reset the Timer
 				public void resetTimer(BooleanRequest request, StreamObserver<BooleanResponse> responseObserver) {
-					
-					// Print a message stating the function has been invoked
+				
 			        System.out.println("Timer is currently running");
-			        // Get the switch variable
+			        // setting the request Values
 			        Boolean reset = request.getBoolValue();
 			        if (reset) {
 			        	System.out.println("The timer has been reset");
 			        }
-			        // Send a response with power value back
+			        // Sending the response
 			        BooleanResponse response = BooleanResponse.newBuilder().setBoolRespVal(reset).build(); 
 
 			        responseObserver.onNext(response);

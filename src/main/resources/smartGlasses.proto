@@ -12,7 +12,7 @@ service smartGlassesService {
  	rpc turnOnGlasses(sgBooleanRequest) returns (sgBooleanResponse) {}
  	rpc setDestination (sgIntRequest) returns (sgBooleanResponse){}
  	rpc startJourney (sgBooleanRequest ) returns (stream sgStringResponse) {}
- 	rpc distanceLeft (stream sgIntRequest) returns (stream sgIntResponse){}
+ 	rpc distanceFrom (stream sgIntRequest) returns (stream sgIntResponse){}
  	}
 
 message sgBooleanRequest {
@@ -28,11 +28,11 @@ message sgStringRequest {
 }
 
 message sgIntRequest {
-    int32 intVal = 1;
+    int32 intRequestValue = 1;
 }
 
 message sgIntResponse {
-    int32 intVal = 1;
+    int32 intResponseValue = 1;
 }
 
 message sgStringResponse {

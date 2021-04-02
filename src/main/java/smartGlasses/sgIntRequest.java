@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private sgIntRequest() {
-    intVal_ = 0;
+    intRequestValue_ = 0;
   }
 
   @java.lang.Override
@@ -45,7 +45,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            intVal_ = input.readInt32();
+            intRequestValue_ = input.readInt32();
             break;
           }
           default: {
@@ -80,13 +80,13 @@ private static final long serialVersionUID = 0L;
             smartGlasses.sgIntRequest.class, smartGlasses.sgIntRequest.Builder.class);
   }
 
-  public static final int INTVAL_FIELD_NUMBER = 1;
-  private int intVal_;
+  public static final int INTREQUESTVALUE_FIELD_NUMBER = 1;
+  private int intRequestValue_;
   /**
-   * <code>int32 intVal = 1;</code>
+   * <code>int32 intRequestValue = 1;</code>
    */
-  public int getIntVal() {
-    return intVal_;
+  public int getIntRequestValue() {
+    return intRequestValue_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -103,8 +103,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (intVal_ != 0) {
-      output.writeInt32(1, intVal_);
+    if (intRequestValue_ != 0) {
+      output.writeInt32(1, intRequestValue_);
     }
     unknownFields.writeTo(output);
   }
@@ -115,9 +115,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (intVal_ != 0) {
+    if (intRequestValue_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, intVal_);
+        .computeInt32Size(1, intRequestValue_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
     smartGlasses.sgIntRequest other = (smartGlasses.sgIntRequest) obj;
 
     boolean result = true;
-    result = result && (getIntVal()
-        == other.getIntVal());
+    result = result && (getIntRequestValue()
+        == other.getIntRequestValue());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -148,8 +148,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + INTVAL_FIELD_NUMBER;
-    hash = (53 * hash) + getIntVal();
+    hash = (37 * hash) + INTREQUESTVALUE_FIELD_NUMBER;
+    hash = (53 * hash) + getIntRequestValue();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      intVal_ = 0;
+      intRequestValue_ = 0;
 
       return this;
     }
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public smartGlasses.sgIntRequest buildPartial() {
       smartGlasses.sgIntRequest result = new smartGlasses.sgIntRequest(this);
-      result.intVal_ = intVal_;
+      result.intRequestValue_ = intRequestValue_;
       onBuilt();
       return result;
     }
@@ -360,8 +360,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(smartGlasses.sgIntRequest other) {
       if (other == smartGlasses.sgIntRequest.getDefaultInstance()) return this;
-      if (other.getIntVal() != 0) {
-        setIntVal(other.getIntVal());
+      if (other.getIntRequestValue() != 0) {
+        setIntRequestValue(other.getIntRequestValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -392,28 +392,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int intVal_ ;
+    private int intRequestValue_ ;
     /**
-     * <code>int32 intVal = 1;</code>
+     * <code>int32 intRequestValue = 1;</code>
      */
-    public int getIntVal() {
-      return intVal_;
+    public int getIntRequestValue() {
+      return intRequestValue_;
     }
     /**
-     * <code>int32 intVal = 1;</code>
+     * <code>int32 intRequestValue = 1;</code>
      */
-    public Builder setIntVal(int value) {
+    public Builder setIntRequestValue(int value) {
       
-      intVal_ = value;
+      intRequestValue_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 intVal = 1;</code>
+     * <code>int32 intRequestValue = 1;</code>
      */
-    public Builder clearIntVal() {
+    public Builder clearIntRequestValue() {
       
-      intVal_ = 0;
+      intRequestValue_ = 0;
       onChanged();
       return this;
     }

@@ -8,7 +8,7 @@ public interface sgIntRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 intVal = 1;</code>
+   * <code>int32 intRequestValue = 1;</code>
    */
-  int getIntVal();
+  int getIntRequestValue();
 }

@@ -8,7 +8,7 @@ public interface sgIntResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 intVal = 1;</code>
+   * <code>int32 intResponseValue = 1;</code>
    */
-  int getIntVal();
+  int getIntResponseValue();
 }

@@ -10,10 +10,11 @@ public class smartWatchClient {
 
 	public static void main(String[] args) throws Exception {
 		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 52025).usePlaintext().build();
-
+		//Initizing the Stubs
 		blockingStub = smartWatchServiceGrpc.newBlockingStub(channel);
 		asyncStub = smartWatchServiceGrpc.newStub(channel);
-
+		
+		//calling the methods
 		turnOnSwitch();
 		startTimer();
 		resetTimer();
@@ -21,10 +22,10 @@ public class smartWatchClient {
 
 	}
 	public static void turnOnSwitch() {
-		// sending the request to the server
+		// Build the request 
 		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(true).build();
 		
-		// check the response from the server
+		// sending request and getting response
 		BooleanResponse response = blockingStub.turnOnSwitch(request);
 		
 		// print out message depending on the response
@@ -37,10 +38,10 @@ public class smartWatchClient {
 	}
 	
 	public static void startTimer() {
-		// sending the request to the server
+		// build the request
 		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(true).build();
 		
-		// check the response from the server
+		// send request and get response
 		BooleanResponse response = blockingStub.startTimer(request);
 		
 		// print out message depending on the response
@@ -53,10 +54,10 @@ public class smartWatchClient {
 	}
 	
 	public static void resetTimer() {
-		// sending the request to the server
+		// build the request 
 		BooleanRequest request = BooleanRequest.newBuilder().setBoolValue(true).build();
 		
-		// check the response from the server
+		// send request and get response
 		BooleanResponse response = blockingStub.resetTimer(request);
 		
 		// print out message depending on the response

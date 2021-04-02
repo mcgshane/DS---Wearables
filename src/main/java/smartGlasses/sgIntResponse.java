@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private sgIntResponse() {
-    intVal_ = 0;
+    intResponseValue_ = 0;
   }
 
   @java.lang.Override
@@ -45,7 +45,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            intVal_ = input.readInt32();
+            intResponseValue_ = input.readInt32();
             break;
           }
           default: {
@@ -80,13 +80,13 @@ private static final long serialVersionUID = 0L;
             smartGlasses.sgIntResponse.class, smartGlasses.sgIntResponse.Builder.class);
   }
 
-  public static final int INTVAL_FIELD_NUMBER = 1;
-  private int intVal_;
+  public static final int INTRESPONSEVALUE_FIELD_NUMBER = 1;
+  private int intResponseValue_;
   /**
-   * <code>int32 intVal = 1;</code>
+   * <code>int32 intResponseValue = 1;</code>
    */
-  public int getIntVal() {
-    return intVal_;
+  public int getIntResponseValue() {
+    return intResponseValue_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -103,8 +103,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (intVal_ != 0) {
-      output.writeInt32(1, intVal_);
+    if (intResponseValue_ != 0) {
+      output.writeInt32(1, intResponseValue_);
     }
     unknownFields.writeTo(output);
   }
@@ -115,9 +115,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (intVal_ != 0) {
+    if (intResponseValue_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, intVal_);
+        .computeInt32Size(1, intResponseValue_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
     smartGlasses.sgIntResponse other = (smartGlasses.sgIntResponse) obj;
 
     boolean result = true;
-    result = result && (getIntVal()
-        == other.getIntVal());
+    result = result && (getIntResponseValue()
+        == other.getIntResponseValue());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -148,8 +148,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + INTVAL_FIELD_NUMBER;
-    hash = (53 * hash) + getIntVal();
+    hash = (37 * hash) + INTRESPONSEVALUE_FIELD_NUMBER;
+    hash = (53 * hash) + getIntResponseValue();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      intVal_ = 0;
+      intResponseValue_ = 0;
 
       return this;
     }
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public smartGlasses.sgIntResponse buildPartial() {
       smartGlasses.sgIntResponse result = new smartGlasses.sgIntResponse(this);
-      result.intVal_ = intVal_;
+      result.intResponseValue_ = intResponseValue_;
       onBuilt();
       return result;
     }
@@ -360,8 +360,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(smartGlasses.sgIntResponse other) {
       if (other == smartGlasses.sgIntResponse.getDefaultInstance()) return this;
-      if (other.getIntVal() != 0) {
-        setIntVal(other.getIntVal());
+      if (other.getIntResponseValue() != 0) {
+        setIntResponseValue(other.getIntResponseValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -392,28 +392,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int intVal_ ;
+    private int intResponseValue_ ;
     /**
-     * <code>int32 intVal = 1;</code>
+     * <code>int32 intResponseValue = 1;</code>
      */
-    public int getIntVal() {
-      return intVal_;
+    public int getIntResponseValue() {
+      return intResponseValue_;
     }
     /**
-     * <code>int32 intVal = 1;</code>
+     * <code>int32 intResponseValue = 1;</code>
      */
-    public Builder setIntVal(int value) {
+    public Builder setIntResponseValue(int value) {
       
-      intVal_ = value;
+      intResponseValue_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 intVal = 1;</code>
+     * <code>int32 intResponseValue = 1;</code>
      */
-    public Builder clearIntVal() {
+    public Builder clearIntResponseValue() {
       
-      intVal_ = 0;
+      intResponseValue_ = 0;
       onChanged();
       return this;
     }

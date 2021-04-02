@@ -124,35 +124,35 @@ public final class smartGlassesServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<smartGlasses.sgIntRequest,
-      smartGlasses.sgIntResponse> getDistanceLeftMethod;
+      smartGlasses.sgIntResponse> getDistanceFromMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "distanceLeft",
+      fullMethodName = SERVICE_NAME + '/' + "distanceFrom",
       requestType = smartGlasses.sgIntRequest.class,
       responseType = smartGlasses.sgIntResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<smartGlasses.sgIntRequest,
-      smartGlasses.sgIntResponse> getDistanceLeftMethod() {
-    io.grpc.MethodDescriptor<smartGlasses.sgIntRequest, smartGlasses.sgIntResponse> getDistanceLeftMethod;
-    if ((getDistanceLeftMethod = smartGlassesServiceGrpc.getDistanceLeftMethod) == null) {
+      smartGlasses.sgIntResponse> getDistanceFromMethod() {
+    io.grpc.MethodDescriptor<smartGlasses.sgIntRequest, smartGlasses.sgIntResponse> getDistanceFromMethod;
+    if ((getDistanceFromMethod = smartGlassesServiceGrpc.getDistanceFromMethod) == null) {
       synchronized (smartGlassesServiceGrpc.class) {
-        if ((getDistanceLeftMethod = smartGlassesServiceGrpc.getDistanceLeftMethod) == null) {
-          smartGlassesServiceGrpc.getDistanceLeftMethod = getDistanceLeftMethod = 
+        if ((getDistanceFromMethod = smartGlassesServiceGrpc.getDistanceFromMethod) == null) {
+          smartGlassesServiceGrpc.getDistanceFromMethod = getDistanceFromMethod = 
               io.grpc.MethodDescriptor.<smartGlasses.sgIntRequest, smartGlasses.sgIntResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "smartGlasses.smartGlassesService", "distanceLeft"))
+                  "smartGlasses.smartGlassesService", "distanceFrom"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   smartGlasses.sgIntRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   smartGlasses.sgIntResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("distanceLeft"))
+                  .setSchemaDescriptor(new smartGlassesServiceMethodDescriptorSupplier("distanceFrom"))
                   .build();
           }
         }
      }
-     return getDistanceLeftMethod;
+     return getDistanceFromMethod;
   }
 
   /**
@@ -205,9 +205,9 @@ public final class smartGlassesServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<smartGlasses.sgIntRequest> distanceLeft(
+    public io.grpc.stub.StreamObserver<smartGlasses.sgIntRequest> distanceFrom(
         io.grpc.stub.StreamObserver<smartGlasses.sgIntResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getDistanceLeftMethod(), responseObserver);
+      return asyncUnimplementedStreamingCall(getDistanceFromMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -234,12 +234,12 @@ public final class smartGlassesServiceGrpc {
                 smartGlasses.sgStringResponse>(
                   this, METHODID_START_JOURNEY)))
           .addMethod(
-            getDistanceLeftMethod(),
+            getDistanceFromMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
                 smartGlasses.sgIntRequest,
                 smartGlasses.sgIntResponse>(
-                  this, METHODID_DISTANCE_LEFT)))
+                  this, METHODID_DISTANCE_FROM)))
           .build();
     }
   }
@@ -288,10 +288,10 @@ public final class smartGlassesServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<smartGlasses.sgIntRequest> distanceLeft(
+    public io.grpc.stub.StreamObserver<smartGlasses.sgIntRequest> distanceFrom(
         io.grpc.stub.StreamObserver<smartGlasses.sgIntResponse> responseObserver) {
       return asyncBidiStreamingCall(
-          getChannel().newCall(getDistanceLeftMethod(), getCallOptions()), responseObserver);
+          getChannel().newCall(getDistanceFromMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -374,7 +374,7 @@ public final class smartGlassesServiceGrpc {
   private static final int METHODID_TURN_ON_GLASSES = 0;
   private static final int METHODID_SET_DESTINATION = 1;
   private static final int METHODID_START_JOURNEY = 2;
-  private static final int METHODID_DISTANCE_LEFT = 3;
+  private static final int METHODID_DISTANCE_FROM = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -415,8 +415,8 @@ public final class smartGlassesServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_DISTANCE_LEFT:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.distanceLeft(
+        case METHODID_DISTANCE_FROM:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.distanceFrom(
               (io.grpc.stub.StreamObserver<smartGlasses.sgIntResponse>) responseObserver);
         default:
           throw new AssertionError();
@@ -472,7 +472,7 @@ public final class smartGlassesServiceGrpc {
               .addMethod(getTurnOnGlassesMethod())
               .addMethod(getSetDestinationMethod())
               .addMethod(getStartJourneyMethod())
-              .addMethod(getDistanceLeftMethod())
+              .addMethod(getDistanceFromMethod())
               .build();
         }
       }

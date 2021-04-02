@@ -56,20 +56,20 @@ public final class smartGlassesImpl {
       "\n\022smartGlasses.proto\022\014smartGlasses\"#\n\020sg" +
       "BooleanRequest\022\017\n\007boolVal\030\001 \001(\010\"(\n\021sgBoo" +
       "leanResponse\022\023\n\013boolRespVal\030\001 \001(\010\"$\n\017sgS" +
-      "tringRequest\022\021\n\tstringVal\030\001 \001(\t\"\036\n\014sgInt" +
-      "Request\022\016\n\006intVal\030\001 \001(\005\"\037\n\rsgIntResponse" +
-      "\022\016\n\006intVal\030\001 \001(\005\")\n\020sgStringResponse\022\025\n\r" +
-      "stringRespVal\030\001 \001(\t2\335\002\n\023smartGlassesServ" +
-      "ice\022R\n\rturnOnGlasses\022\036.smartGlasses.sgBo" +
-      "oleanRequest\032\037.smartGlasses.sgBooleanRes" +
-      "ponse\"\000\022O\n\016setDestination\022\032.smartGlasses" +
-      ".sgIntRequest\032\037.smartGlasses.sgBooleanRe" +
-      "sponse\"\000\022R\n\014startJourney\022\036.smartGlasses." +
-      "sgBooleanRequest\032\036.smartGlasses.sgString" +
-      "Response\"\0000\001\022M\n\014distanceLeft\022\032.smartGlas" +
-      "ses.sgIntRequest\032\033.smartGlasses.sgIntRes" +
-      "ponse\"\000(\0010\001B\"\n\014smartGlassesB\020smartGlasse" +
-      "sImplP\001b\006proto3"
+      "tringRequest\022\021\n\tstringVal\030\001 \001(\t\"\'\n\014sgInt" +
+      "Request\022\027\n\017intRequestValue\030\001 \001(\005\")\n\rsgIn" +
+      "tResponse\022\030\n\020intResponseValue\030\001 \001(\005\")\n\020s" +
+      "gStringResponse\022\025\n\rstringRespVal\030\001 \001(\t2\335" +
+      "\002\n\023smartGlassesService\022R\n\rturnOnGlasses\022" +
+      "\036.smartGlasses.sgBooleanRequest\032\037.smartG" +
+      "lasses.sgBooleanResponse\"\000\022O\n\016setDestina" +
+      "tion\022\032.smartGlasses.sgIntRequest\032\037.smart" +
+      "Glasses.sgBooleanResponse\"\000\022R\n\014startJour" +
+      "ney\022\036.smartGlasses.sgBooleanRequest\032\036.sm" +
+      "artGlasses.sgStringResponse\"\0000\001\022M\n\014dista" +
+      "nceFrom\022\032.smartGlasses.sgIntRequest\032\033.sm" +
+      "artGlasses.sgIntResponse\"\000(\0010\001B\"\n\014smartG" +
+      "lassesB\020smartGlassesImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -106,13 +106,13 @@ public final class smartGlassesImpl {
     internal_static_smartGlasses_sgIntRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartGlasses_sgIntRequest_descriptor,
-        new java.lang.String[] { "IntVal", });
+        new java.lang.String[] { "IntRequestValue", });
     internal_static_smartGlasses_sgIntResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_smartGlasses_sgIntResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartGlasses_sgIntResponse_descriptor,
-        new java.lang.String[] { "IntVal", });
+        new java.lang.String[] { "IntResponseValue", });
     internal_static_smartGlasses_sgStringResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_smartGlasses_sgStringResponse_fieldAccessorTable = new
